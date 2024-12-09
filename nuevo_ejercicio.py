@@ -2,14 +2,14 @@ import csv
 
 # Function to read the CSV file and return its content
 def read_csv(file_path):
-    with open(file_path, mode='r', encoding='utf-8') as file:
+    with open(file_path, mode ='r', encoding ='utf-8') as file:
         reader = csv.DictReader(file)
         data = [row for row in reader]
     return data
 
 # Function to write the CSV file with additional columns
 def write_csv(file_path, data, fieldnames):
-    with open(file_path, mode='w', newline='', encoding='utf-8') as file:
+    with open(file_path, mode ='w', newline ='', encoding ='utf-8') as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(data)
